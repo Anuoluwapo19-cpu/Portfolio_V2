@@ -34,10 +34,13 @@ body {
 header,
 section,
 footer {
-  max-width: 1366px;
+  max-width: 1600px;
   margin: auto;
 }
 
+section{
+    padding: 100px 6%;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -57,13 +60,14 @@ header {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 34px;
   color: #D9D9D9;
 }
+
 /* HERO */
 .hero{
-  padding: 63px 139px 62px 139px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,7 +77,7 @@ nav {
 
 .hero h1 {
   color: #FFFFFF;
-  font-size: 51px;
+  font-size: 54px;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0%;
@@ -89,15 +93,12 @@ nav {
   margin-bottom: 25px;
 }
 
-.hero .left {
-  width: 60%;
-}
-
 .hero .right {
-  width: 40%;
+  width: 45%;
 }
 
-.hero.left {
+.hero .left {
+   width: 55%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -105,7 +106,6 @@ nav {
 
 .hero .right img {
   width: 100%;
-  height: 50%;
   aspect-ratio: 1;
   border-radius: 2px;
   object-fit: cover;
@@ -121,6 +121,7 @@ nav {
 
 .btn-container{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -231,7 +232,6 @@ nav {
   justify-content: space-between;
   align-items: flex-start;
   gap: 80px;
-  padding: 100px 7%;
   background: transparent;
 }
 
@@ -244,10 +244,11 @@ nav {
   max-width: 750px;
 }
 
-.about h1{
+.about h2,
+.work-heading h2{
   margin: 0;
   color: #ffffff;
-  font-size: 55px;
+  font-size: 49px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -268,19 +269,11 @@ nav {
 
 /* WORK  */
 .work {
-    padding: 100px 7%;
     background: transparent;
 }
 
 .work-heading {
     margin-bottom: 60px;
-}
-
-.work-heading h2 {
-    color: #ffffff;
-    font-size: 55px;
-    letter-spacing: 2px;
-    margin: 0;
 }
 
 .work-content {
@@ -431,7 +424,7 @@ nav {
     position: relative;
     background: #0f172a;
     color: #ffffff;
-    padding: 100px 8% 30px;
+    padding: 100px 6% 30px;
     overflow: hidden;
 }
 
@@ -912,6 +905,22 @@ nav {
     }
 }
 
+@media (max-width: 950px) {
+
+    .about {
+        gap: 40px;
+    }
+
+    .about .left {
+        width: 40%;
+    }
+
+    .about .right {
+        width: 60%;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     .roundy {
@@ -978,18 +987,28 @@ nav {
 }
 
 @media screen and (max-width: 635px){
-    .hero h1,
-    .hero p{
-        font-size: 20px;
+    .hero h1 {
+        font-size: 38px;
+        line-height: 120%;
+    }
+
+    .hero p {
+        font-size: 16px;
         line-height: 150%;
     }
+
 }
 
 @media screen and (max-width: 535px){
     header{
         flex-direction: column;
         align-items: start;
-        gap: 30px
+        gap: 25px;
+        padding: 15px 20px;
+    }
+
+     nav {
+        gap: 15px;
     }
 
     .hero {
@@ -999,7 +1018,36 @@ nav {
 
 @media screen and (max-width: 410px){
     header {
-
-    padding: 10px 42px;
+    padding: 10px 20px;
   }
+}
+
+@media screen and (max-width: 350px){
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .github-icon {
+        align-self: center;
+    }
+
+    .project-info {
+        padding: 18px;
+    }
+
 }
