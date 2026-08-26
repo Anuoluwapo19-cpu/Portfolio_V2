@@ -33,3 +33,18 @@ contactForm.addEventListener("submit", function () {
 
     sendButton.disabled = true;
 });
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+});
+
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+    });
+});
