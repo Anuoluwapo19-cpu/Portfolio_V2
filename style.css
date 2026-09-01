@@ -1019,9 +1019,10 @@ nav {
     }
 
     .header-container {
-        width: auto;
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 30px;
     }
 
@@ -1031,6 +1032,7 @@ nav {
 
     .nav-container {
         width: 100%;
+        
     }
 
     nav {
